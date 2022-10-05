@@ -77,3 +77,16 @@ docker run --rm -v $(realpath cert):/app/cert:ro -v $(realpath .env):/app/.env:r
 **Note: All above mentioned Docker containers can be stopped by running `docker stop passport-saml-example`.**
 
 **Note: The logs of the above mentioned Docker containers can be viewed by running `docker logs passport-saml-example`.**
+
+Running locally, HTTPS-mode
+---------------------------
+
+- Place your `cert.pem` and `key.pem` files that you wish to use for
+securing the connection to the _passport-saml-example_ server in the
+`cert/https/` directory.
+
+- Start `app.js` with:
+
+```bash
+USE_SSL=true node app.js
+```
