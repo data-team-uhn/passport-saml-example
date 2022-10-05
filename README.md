@@ -87,6 +87,19 @@ securing the connection to the _passport-saml-example_ server in the
 USE_SSL=true node app.js
 ```
 
+Running in Docker, HTTPS-mode
+-----------------------------
+
+- Place your `cert.pem` and `key.pem` files that you wish to use for
+securing the connection to the _passport-saml-example_ server in the
+`cert/https/` directory.
+
+- Start the Docker container with the command:
+
+```bash
+docker run --rm -v $(realpath cert):/app/cert:ro -v $(realpath .env):/app/.env:ro -p 127.0.0.1:8443:8443 -e USE_SSL=true --name passport-saml-example -d data-team-uhn/passport-saml-example
+```
+
 **Note: All above mentioned Docker containers can be stopped by running `docker stop passport-saml-example`.**
 
 **Note: The logs of the above mentioned Docker containers can be viewed by running `docker logs passport-saml-example`.**
