@@ -19,7 +19,10 @@ Creating Private Key and Certificates
 
 The SP files ( `cert/saml/cert.pem`, `cert/saml/key.pem` ) can be
 generated with the following command (accepting all default options):
-- `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -nodes -days 900`
+
+```bash
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -nodes -days 900
+```
 
 The IdP Certificate ( `idp_cert.pem` ) can be obtained through the
 following commands.
