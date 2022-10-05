@@ -12,16 +12,23 @@ located in the project's root directory. These files include:
 - `cert.pem`: Your own SAML certificate
 - `key.pem`: The private key associated with your own SAML certificate.
 
+Next, copy `.env.sample` to `.env` and edit appropriately.
+
 Creating Private Key and Certificates
 =====================================
 
-Generate the SP files with the following command:
+The SP files ( `cert/saml/cert.pem`, `cert/saml/key.pem` ) can be
+generated with the following command (accepting all default options):
 - `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -nodes -days 900`
 
-The IdP Certificate is contained within the `ds:X509Certificate` tag.
-- Copy the tag's contents into a file named `cert_idp.pem`.
+The IdP Certificate ( `idp_cert.pem` ) can be obtained through the
+following commands.
 
-Next, copy `.env.sample` to `.env` and edit appropriately. Running this app locally will likely not work since the IdP can't redirect to `localhost`.
+```bash
+echo "-----BEGIN CERTIFICATE-----" > cert/saml/idp_cert.pem
+python3 print_idp_cert_from_url.py --saml_metadata_url https://fs.uhn.ca/FederationMetadata/2007-06/FederationMetadata.xml >> cert/saml/idp_cert.pem
+echo "-----END CERTIFICATE-----" >> cert/saml/idp_cert.pem
+```
 
 Registering the Service Provider
 ================================
