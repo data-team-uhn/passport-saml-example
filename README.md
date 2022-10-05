@@ -74,10 +74,6 @@ Running in Docker, HTTP-mode
 docker run --rm -v $(realpath cert):/app/cert:ro -v $(realpath .env):/app/.env:ro -p 127.0.0.1:8080:8080 --name passport-saml-example -d data-team-uhn/passport-saml-example
 ```
 
-**Note: All above mentioned Docker containers can be stopped by running `docker stop passport-saml-example`.**
-
-**Note: The logs of the above mentioned Docker containers can be viewed by running `docker logs passport-saml-example`.**
-
 Running locally, HTTPS-mode
 ---------------------------
 
@@ -90,3 +86,7 @@ securing the connection to the _passport-saml-example_ server in the
 ```bash
 USE_SSL=true node app.js
 ```
+
+**Note: All above mentioned Docker containers can be stopped by running `docker stop passport-saml-example`.**
+
+**Note: The logs of the above mentioned Docker containers can be viewed by running `docker logs passport-saml-example`.**
