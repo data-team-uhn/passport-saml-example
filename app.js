@@ -71,7 +71,7 @@ app.get('/login', passport.authenticate('saml', { failureRedirect: '/login/fail'
   res.redirect('/');
 });
 
-app.post('/sp/consumer', passport.authenticate('saml', { failureRedirect: '/login/fail' }), (req, res) => {
+app.post(process.env.ACS_PATH, passport.authenticate('saml', { failureRedirect: '/login/fail' }), (req, res) => {
   res.redirect('/');
 });
 
