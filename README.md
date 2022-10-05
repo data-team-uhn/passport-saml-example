@@ -2,7 +2,7 @@
 
 This node.js web application demonstrates SSO authentication provided by a SAML server (such as https://fs.uhn.ca/), using the `passport-saml` package.
 
-![demovideo.webm](demovideo.webm)
+![demo.gif](demo.gif)
 
 Config
 ======
