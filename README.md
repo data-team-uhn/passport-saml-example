@@ -1,6 +1,6 @@
 # passport-saml-example
 
-This node.js web application demonstrates SSO authentication provided by RIT's Shibboleth Server (https://shibboleth.main.ad.rit.edu/), using the `passport-saml` package.
+This node.js web application demonstrates SSO authentication provided by a SAML server (such as https://fs.uhn.ca/), using the `passport-saml` package.
 
 Config
 ======
