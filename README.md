@@ -40,13 +40,22 @@ The administator of the SAML identity provider (eg. `https://fs.uhn.ca`)
 will need to be provided with `cert.pem` in order to configure SAML
 authentication for this domain.
 
+Building
+========
+
+For running locally
+-------------------
+
+```bash
+npm install
+```
+
 Usage
 =====
 
 Running locally, HTTP-mode
 --------------------------
 
-```
-npm install
+```bash
 node app.js
 ```
