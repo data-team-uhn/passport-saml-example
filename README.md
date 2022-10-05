@@ -50,6 +50,13 @@ For running locally
 npm install
 ```
 
+For running in Docker
+---------------------
+
+```bash
+docker build -t data-team-uhn/passport-saml-example .
+```
+
 Usage
 =====
 
