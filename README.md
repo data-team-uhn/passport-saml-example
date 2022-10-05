@@ -33,7 +33,9 @@ echo "-----END CERTIFICATE-----" >> cert/saml/idp_cert.pem
 Registering the Service Provider
 ================================
 
-Contact ITS to register your Service Provider. During this step, the IdP Administrator downloads the metadata from the `/Shibboleth.sso/Metadata` endpoint and loads it into the IdP.
+The administator of the SAML identity provider (eg. `https://fs.uhn.ca`)
+will need to be provided with `cert.pem` in order to configure SAML
+authentication for this domain.
 
 Usage
 =====
