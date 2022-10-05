@@ -40,8 +40,10 @@ authentication for this domain.
 Usage
 =====
 
+Running locally, HTTP-mode
+--------------------------
+
 ```
 npm install
 node app.js
 ```
-
